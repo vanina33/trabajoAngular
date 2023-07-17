@@ -1,0 +1,13 @@
+<h1>proyecto de angular</h1>
+
+<button mat-raised-button color="primary" (click)="mostrarList = !mostrarList">
+  {{ mostrarList ? 'Ocultar lista' : 'Mostrar lista' }}
+</button>
+
+<div *ngIf="mostrarList">
+  <ul>
+    <li *ngFor="let productos of productos">
+      {{ productos.nombre }} - {{ productos.costos }}
+    </li>
+  </ul>
+</div>
